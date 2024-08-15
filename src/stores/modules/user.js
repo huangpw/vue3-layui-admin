@@ -1,19 +1,20 @@
-import {
-  computed,
-  ref,
-} from 'vue';
+import { ref } from 'vue';
 
 import { defineStore } from 'pinia';
 
-export const useUserStore = defineStore('counter', () => {
-  // 变量
-  const count = ref(0)
-  const name = ref("管理员")
-  // 方法 
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
+export const useUserStore = defineStore('user', () => {
+  const user = null;
+  const token = null;
+  // 登录
+  const login = (user, token) => {
+    this.user = user;
+    this.token = token;
   }
+  // 登出
+  const logout = () => {
+    this.user = null;
+  }
+  
 
-  return { count, name, doubleCount, increment }
+  return { user, token, login, logout }
 })

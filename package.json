@@ -12,6 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@layui/layui-vue": "^2.18.1",
     "axios": "^1.7.4",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
@@ -19,6 +20,7 @@
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
+    "@layui/unplugin-vue-components": "^0.0.2",
     "@rushstack/eslint-patch": "^1.8.0",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
