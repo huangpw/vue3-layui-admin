@@ -1,5 +1,9 @@
 <template>
-  <div>主页</div>
+  <div>主页{{ user.name }}</div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useUserStore } from '@/stores'
+
+const user = useUserStore()
+</script>
