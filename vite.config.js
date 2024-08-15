@@ -8,6 +8,7 @@ import { defineConfig } from 'vite';
 
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+// 自动导入组件
 import Components from '@layui/unplugin-vue-components/vite'
 import { LayuiVueResolver } from '@layui/unplugin-vue-components/resolvers'
 
@@ -35,6 +36,13 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
-    port: '9001'
+    port: '9001',
+    proxy: {
+        '/api': {
+            target: 'http://localhost:8080',
+            changeOrigin: true,
+            rewrite: (path) => path.replace(/^\/api/, '')
+        }
+    }
   }
 })

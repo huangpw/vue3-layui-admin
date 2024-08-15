@@ -1,6 +1,7 @@
 import {
   createRouter,
-  createWebHistory,
+    // createWebHistory,
+  createWebHashHistory
 } from 'vue-router';
 
 import Home from '@/views/home/Home.vue';
@@ -8,7 +9,7 @@ import Login from '@/views/login/Login.vue';
 
 // 路由
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/login',
